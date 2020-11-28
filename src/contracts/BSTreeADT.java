@@ -69,10 +69,10 @@ public interface BSTreeADT<E> extends Serializable {
 	 */
 	public BSTreeADT<E> getRoot();
 	
-	getHeight()
+	//getHeight()
 	
 	// Use counter to track the number of nodes
-	size()
+	//size()
 	
 	/**
 	 * Checks if 
@@ -85,7 +85,7 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Set the root is null -> Then the rest of nodes will be gone by a garbage collector.
 	 * 
 	 */
-	clear()
+	//clear()
 	
 	/**
 	 * 
