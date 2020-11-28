@@ -8,7 +8,7 @@ import contracts.BSTreeADT;
 import contracts.Iterator;
 
 /**
- * @author kornk
+ * @author Jaeyoung Kim
  *
  */
 public class BSTReferenceBased<E> implements BSTreeADT<E> {
@@ -43,11 +43,11 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 		return null;
 	}
 
-	@Override
-	public void getHeight() {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void getHeight() {
+//		// TODO Auto-generated method stub
+//		
+//	}
 
 	@Override
 	public boolean isEmpty() {
@@ -55,11 +55,11 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 		return false;
 	}
 
-	@Override
-	public void clear() {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void clear() {
+//		// TODO Auto-generated method stub
+//		
+//	}
 
 	@Override
 	public boolean contains() {
