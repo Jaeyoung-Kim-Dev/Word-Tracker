@@ -55,28 +55,35 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 		return false;
 	}
 
-//	@Override
-//	public void clear() {
-//		// TODO Auto-generated method stub
-//		
-//	}
-
-	@Override
-	public boolean contains() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public BSTreeADT<E> search() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public Iterator<E> iterator() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public BSTreeADT<E> remove(BSTNodeADT<E> node) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean contains(BSTNodeADT<E> toFind) throws NullPointerException {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
