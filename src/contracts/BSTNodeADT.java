@@ -14,8 +14,8 @@ public interface BSTNodeADT<E> {
 	/**
 	 * Gets the left child of the node.
 	 * 
-	 * Pre-conditions:
-	 * Post-conditions:
+	 * Pre-conditions: A valid binary search tree node exists.
+	 * Post-conditions: It returns the left node of tree.
 	 * 
 	 * @return Left child or null if no left child.
 	 */
@@ -24,8 +24,8 @@ public interface BSTNodeADT<E> {
 	/**
 	 * Sets the left child of the node.
 	 * 
-	 * Pre-conditions:
-	 * Post-conditions:
+	 * Pre-conditions: A valid binary search tree node exists.
+	 * Post-conditions: It sets the left child of the node.
 	 * 
 	 * @param left the node to be set.
 	 */
@@ -35,8 +35,8 @@ public interface BSTNodeADT<E> {
 	/**
 	 * Gets the right child of the node.
 	 * 
-	 * Pre-conditions:
-	 * Post-conditions:
+	 * Pre-conditions: A valid binary search tree node exists.
+	 * Post-conditions: It returns the right node of tree.
 	 * 
 	 * @return Right child or null if no right child.
 	 */
@@ -45,8 +45,8 @@ public interface BSTNodeADT<E> {
 	/**
 	 * Sets the right child of the node.
 	 * 
-	 * Pre-conditions:
-	 * Post-conditions:
+	 * Pre-conditions: A valid binary search tree node exists.
+	 * Post-conditions:It sets the right child of the node.
 	 * 
 	 * @param right the node to be set.
 	 */
@@ -56,8 +56,8 @@ public interface BSTNodeADT<E> {
 	 * 
 	 * Gets the data of the node.
 	 * 
-	 * Pre-conditions:
-	 * Post-conditions:
+	 * Pre-conditions: A valid binary search tree node exists.
+	 * Post-conditions: It returns the data of node.
 	 * 
 	 * @return data of the node
 	 */

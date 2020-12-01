@@ -19,7 +19,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Adds an element to the binary search tree.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists and an element is passed.
-	 * 
 	 * Post-conditions: It returns true if element is added to the binary search tree otherwise it returns false.
 	 * 
 	 * @param data Element data to add.
@@ -31,7 +30,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Removes an specific element from the binary search tree.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists and an node is passed.
-	 * 
 	 * Post-conditions: It removes an element from the binary search tree and returns the element.
 	 * 
 	 * @param data Element data to be removed.
@@ -44,7 +42,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Checks if a node has a left child.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists and an node is passed.
-	 * 
 	 * Post-conditions: It returns true if the node has a left child otherwise it returns false.
 	 * 
 	 * @param node Node to check.
@@ -56,7 +53,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Checks if a node has a right child.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists and an node is passed.
-	 * 
 	 * Post-conditions: It returns true if the node has a right child otherwise it returns false.
 	 * 
 	 * @param node Node to check.
@@ -68,7 +64,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Checks if a node is a leaf.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists and an node is passed.
-	 * 
 	 * Post-conditions: It returns true if the node is a leaf otherwise it returns false.
 	 * 
 	 * @param node Node to check.
@@ -80,7 +75,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Gets the root node of the tree.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists.
-	 * 
 	 * Post-conditions: It returns the root node of tree.
 	 * 
 	 * @return Root node of tree.
@@ -92,7 +86,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * The size method will return the current element count contained in the list.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists.
-	 * 
 	 * Post-conditions: It returns the number of Elements on the binary search tree.
 	 * 
 	 * @return The current element count.
@@ -103,7 +96,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Checks if the binary search tree is empty.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists.
-	 * 
 	 * Post-conditions: It returns true if the root is empty or size is 0 otherwise it returns False.
 	 * 
 	 * @return True if the root is empty or size is 0.
@@ -115,7 +107,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * collector.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists.
-	 * 
 	 * Post-conditions: Binary search tree is empty.
 	 * 
 	 */
@@ -125,7 +116,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Checks if the binary search tree contains the specified node.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists.
-	 * 
 	 * Post-conditions: It returns true if a specific node is present in the binary search tree
 	 * otherwise it returns False.
 	 * 
@@ -140,7 +130,6 @@ public interface BSTreeADT<E> extends Serializable {
 	 * Returns an iterator over the nodes in the binary search tree, in proper sequence.
 	 * 
 	 * Pre-conditions: A valid binary search tree exists and an node is passed.
-	 * 
 	 * Post-conditions: It returns an iterator over the items contained in this binary search tree.
 	 * 
 	 * @return Iterator instance.
