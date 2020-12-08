@@ -10,7 +10,8 @@ import java.io.Serializable;
  * @author Jaeyoung Kim
  *
  */
-public interface BSTNodeADT<E> {
+public interface BSTNodeADT<E> extends Serializable {
+	
 	/**
 	 * Gets the left child of the node.
 	 * 
