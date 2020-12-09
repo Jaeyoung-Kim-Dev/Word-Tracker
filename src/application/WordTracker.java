@@ -35,7 +35,7 @@ public class WordTracker {
 			}  else if (arg.equals("-po")) {
 				printOption = PRINT_FILES_LINES_FREQUENCY;
 			}
-		}
+		}//
 	}
 
 }

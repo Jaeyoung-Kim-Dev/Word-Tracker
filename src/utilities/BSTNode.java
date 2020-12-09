@@ -9,6 +9,7 @@ import contracts.BSTNodeADT;
  * @author kornk
  *
  */
+@SuppressWarnings("serial")
 public class BSTNode<E> implements BSTNodeADT<E> {
 
 	private E data;
@@ -34,7 +35,7 @@ public class BSTNode<E> implements BSTNodeADT<E> {
 
 	@Override
 	public void setRight(BSTNodeADT<E> right) {
-		// TODO Auto-generated method stub
+		this.right = (BSTNode<E>) right;
 		
 	}
 	
