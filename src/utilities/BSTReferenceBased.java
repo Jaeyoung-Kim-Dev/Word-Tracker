@@ -11,6 +11,7 @@ import contracts.Iterator;
  * @author Jaeyoung Kim
  *
  */
+@SuppressWarnings("serial")
 public class BSTReferenceBased<E> implements BSTreeADT<E> {
 
 	@Override
