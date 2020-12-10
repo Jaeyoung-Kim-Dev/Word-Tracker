@@ -17,6 +17,12 @@ public class BSTNode<E> implements BSTNodeADT<E> {
 	private BSTNode<E> left;
 	private BSTNode<E> right;
 	
+	public BSTNode(E data) {
+		this.data = data;
+		this.left = null;
+		this.right = null;
+	}
+	
 	@Override
 	public BSTNodeADT<E> getLeft() {		
 		return left;

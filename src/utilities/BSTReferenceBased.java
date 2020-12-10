@@ -14,22 +14,36 @@ import contracts.Iterator;
 @SuppressWarnings("serial")
 public class BSTReferenceBased<E> implements BSTreeADT<E> {
 
+	private BSTNode<E> root;
+
+	private int size;
+
+	public BSTReferenceBased() {
+		this.root = null;
+		this.size = 0;
+	}
+
 	@Override
 	public boolean add(E data) {
-		// TODO Auto-generated method stub
+		if (root == null) {
+			root = new BSTNode<E>(data);
+		}
+		
+		if (data < root.getData()) {
+			
+		}
+		
 		return false;
 	}
 
 	@Override
 	public boolean hasLeftChild(BSTNodeADT<E> node) {
-		// TODO Auto-generated method stub
-		return false;
+		return node.getLeft() != null ? true : false;
 	}
 
 	@Override
 	public boolean hasRightChild(BSTNodeADT<E> node) {
-		// TODO Auto-generated method stub
-		return false;
+		return node.getRight() != null ? true : false;
 	}
 
 	@Override
@@ -56,7 +70,6 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 		return false;
 	}
 
-
 	@Override
 	public Iterator<E> iterator() {
 		// TODO Auto-generated method stub
@@ -78,7 +91,7 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
