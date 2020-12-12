@@ -6,7 +6,7 @@ package utilities;
 import contracts.BSTNodeADT;
 
 /**
- * @author kornk
+ * @author Jaeyoung Kim
  *
  */
 @SuppressWarnings("serial")
@@ -21,6 +21,12 @@ public class BSTNode<E> implements BSTNodeADT<E> {
 		this.data = data;
 		this.left = null;
 		this.right = null;
+	}
+	
+	public BSTNode(E data, BSTNode<E> left, BSTNode<E> right) {
+		this.data = data;
+		this.left = left;
+		this.right = right;
 	}
 	
 	@Override
@@ -45,13 +51,9 @@ public class BSTNode<E> implements BSTNodeADT<E> {
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public E getData() {
-		return data;
+		return (E) data;
 	}
-
-	
-
-	
-
 }
