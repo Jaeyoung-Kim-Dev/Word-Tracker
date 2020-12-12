@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * @author kornk
+ * @author Jaeyoung Kim
  *
  */
 public class Word implements Serializable {

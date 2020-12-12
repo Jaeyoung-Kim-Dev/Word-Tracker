@@ -3,8 +3,10 @@
  */
 package utilities;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
+import contracts.BSTNodeADT;
 import contracts.Iterator;
 
 /**
@@ -13,34 +15,36 @@ import contracts.Iterator;
  */
 public class BSTIterator<E> implements Iterator<E> {
 	private int position;
-	private BSTReferenceBased<E> referenceBased;
+	private ArrayList<E> sortedNodes;
 	
 	/**
 	 * @param mySLL mySLL
 	 */
-	public BSTIterator(BSTReferenceBased<E> referenceBased) {
-		this.referenceBased = referenceBased;
+	public BSTIterator(BSTNodeADT<E> root) {
+		this.sortedNodes = new ArrayList<E>();
 		this.position = -1;
-		
+		this.inorder(root);
 	}
 
+	private void inorder(BSTNodeADT<E> root) {
+
+        if (root == null) {
+            return;
+        }
+
+        this.inorder(root.getLeft());
+        this.sortedNodes.add(root.getData());
+        this.inorder(root.getRight());
+    }
+	
 	@Override
 	public boolean hasNext() {
-		boolean inBounds = this.position < this.referenceBased.size() - 1;
-	       
-		return inBounds;
+		return this.position + 1 < this.sortedNodes.size();
 	}
 
 	@Override
 	public E next() throws NoSuchElementException {
-		if (!this.hasNext())
-			throw new NoSuchElementException();
-		
-		this.position++;
-		
-		//E item = this.referenceBased.get(this.position);
-		
-		return null;//item;
+		return this.sortedNodes.get(++this.position);
 	}
 
 }

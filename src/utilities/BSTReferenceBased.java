@@ -6,6 +6,7 @@ package utilities;
 import contracts.BSTNodeADT;
 import contracts.BSTreeADT;
 import contracts.Iterator;
+import problemdomain.Word;
 
 /**
  * @author Jaeyoung Kim
@@ -14,8 +15,7 @@ import contracts.Iterator;
 @SuppressWarnings("serial")
 public class BSTReferenceBased<E> implements BSTreeADT<E> {
 
-	private BSTNode<E> root;
-
+	private BSTNodeADT<E> root;
 	private int size;
 
 	public BSTReferenceBased() {
@@ -25,19 +25,37 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 
 	@Override
 	public boolean add(E data) {
-		if (root == null) {
-			root = new BSTNode<E>(data);
+		if (isEmpty()) {
+			this.root = new BSTNode<E>(data);
+		} else {
+			this.root = addRecursive(this.root, data);
 		}
+		this.size++;
+		return true;
+	}
+
+	private BSTNodeADT<E> addRecursive(BSTNodeADT<E> node, E data) {
+		String wordFromNode = ((Word) node.getData()).getWord();
+		String wordToAdd = ((Word) data).getWord();
 		
-		if (data < root.getData()) {
-			
+		if (wordToAdd.compareTo(wordFromNode) < 0) { // insert in the left subtree
+			if (node.getLeft() == null) {
+				node.setLeft(new BSTNode<>(data));
+			} else {
+				node.setLeft(addRecursive(node.getLeft(), data));
+			}
+		} else {
+			if (node.getRight() == null) {
+				node.setRight(new BSTNode<>(data));
+			} else {
+				node.setRight(addRecursive(node.getRight(), data));
+			}
 		}
-		
-		return false;
+		return node;
 	}
 
 	@Override
-	public boolean hasLeftChild(BSTNodeADT<E> node) {
+	public boolean hasLeftChild(BSTNodeADT<E> node) { //public boolean hasLeftChild(BSTNodeADT<E> node) {
 		return node.getLeft() != null ? true : false;
 	}
 
@@ -48,14 +66,12 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 
 	@Override
 	public boolean isLeaf(BSTNodeADT<E> node) {
-		// TODO Auto-generated method stub
-		return false;
+		return node.getLeft() == null && node.getRight() == null;
 	}
 
 	@Override
 	public BSTreeADT<E> getRoot() {
-		// TODO Auto-generated method stub
-		return null;
+		return (BSTreeADT<E>) this.root;
 	}
 
 //	@Override
@@ -66,14 +82,12 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.root == null;
 	}
 
 	@Override
-	public Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+	public Iterator<E> iterator() {		
+		return new BSTIterator<E>(this.root);
 	}
 
 	@Override
@@ -84,19 +98,16 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return size;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-
+		this.root = null;
 	}
 
 	@Override
 	public boolean contains(BSTNodeADT<E> toFind) throws NullPointerException {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

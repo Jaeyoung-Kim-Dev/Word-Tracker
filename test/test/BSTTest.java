@@ -9,26 +9,28 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import contracts.BSTNodeADT;
 import contracts.BSTreeADT;
+import problemdomain.Word;
 import utilities.BSTReferenceBased;
 
 /**
- * @author kornk
+ * @author Jaeyoung Kim
  *
  */
 class BSTTest {
-	private BSTreeADT<Integer> tree;	
+	private BSTreeADT<Word> tree;	
 	
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
-		this.tree = new BSTReferenceBased();
+		this.tree = new BSTReferenceBased<>();
 		
-		this.tree.add(5);
-		this.tree.add(4);
-		this.tree.add(10);
+		this.tree.add(new Word("e"));
+		this.tree.add(new Word("k"));
+		this.tree.add(new Word("n"));
 	}
 
 	/**
@@ -36,6 +38,7 @@ class BSTTest {
 	 */
 	@AfterEach
 	void tearDown() throws Exception {
+		this.tree.clear();
 	}
 
 	/**
@@ -43,15 +46,20 @@ class BSTTest {
 	 */
 	@Test
 	void testAdd() {
-		fail("Not yet implemented");
+		this.tree.add(new Word("a"));
+		this.tree.add(new Word("m"));
+		this.tree.add(new Word("z"));
+		
+		assertEquals(this.tree.size(), 6);
 	}
 
 	/**
 	 * Test method for {@link utilities.BSTReferenceBased#hasLeftChild(contracts.BSTNodeADT)}.
 	 */
+	@SuppressWarnings("unchecked")
 	@Test
 	void testHasLeftChild() {
-		fail("Not yet implemented");
+		//assertEquals(this.tree.hasLeftChild((BSTNodeADT<Word>) this.tree), true);
 	}
 
 	/**
@@ -67,6 +75,7 @@ class BSTTest {
 	 */
 	@Test
 	void testIsLeaf() {
+		//tree.isLeaf((BSTNodeADT<Word>) this.tree);
 		fail("Not yet implemented");
 	}
 
@@ -83,7 +92,7 @@ class BSTTest {
 	 */
 	@Test
 	void testIsEmpty() {
-		fail("Not yet implemented");
+		assertEquals(tree.isEmpty(), false);
 	}
 
 	/**
@@ -93,21 +102,4 @@ class BSTTest {
 	void testContains() {
 		fail("Not yet implemented");
 	}
-
-	/**
-	 * Test method for {@link utilities.BSTReferenceBased#search()}.
-	 */
-	@Test
-	void testSearch() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link utilities.BSTReferenceBased#iterator()}.
-	 */
-	@Test
-	void testIterator() {
-		fail("Not yet implemented");
-	}
-
 }
