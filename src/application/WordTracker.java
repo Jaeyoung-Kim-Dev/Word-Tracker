@@ -64,9 +64,9 @@ public class WordTracker {
 			e.printStackTrace();
 		}
 		
-//		while(tree.iterator().hasNext()) {
-//			System.out.print((tree.iterator().next()).getWord());
-//		}
+		while(tree.iterator().hasNext()) {
+			System.out.print((tree.iterator().next()).getWord());
+		}
 
 	}
 }
