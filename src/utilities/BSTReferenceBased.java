@@ -74,11 +74,6 @@ public class BSTReferenceBased<E> implements BSTreeADT<E> {
 		return (BSTreeADT<E>) this.root;
 	}
 
-//	@Override
-//	public void getHeight() {
-//		// TODO Auto-generated method stub
-//		
-//	}
 
 	@Override
 	public boolean isEmpty() {
