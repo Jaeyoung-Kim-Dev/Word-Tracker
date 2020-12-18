@@ -57,7 +57,7 @@ public class WordTracker {
 			while (sc.hasNext()) {
 				String readWord = sc.next().replaceAll("[^a-zA-Z0-9]", "");
 				if (readWord != "" || readWord != null) {
-					tree.add(new Word(readWord));
+					tree.add(new Word(readWord));//TODO:
 				}
 			}
 		} catch (FileNotFoundException e) {
